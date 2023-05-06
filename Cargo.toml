@@ -1,0 +1,16 @@
+[package]
+name = "nori_backdoor"
+version = "0.1.0"
+edition = "2021"
+authors = ["<rickporto.sec@gmail.com>"]
+
+[dependencies]
+mio = "0.7.0"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1 
+panic = "abort"
+incremental = false
+debug = false
