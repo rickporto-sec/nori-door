@@ -3,7 +3,7 @@ use std::string::String;
 use std::net::UdpSocket;
 
 fn main() -> std::io::Result<()> {
-    let socket = UdpSocket::bind("127.0.0.1:8000")?;
+    let socket = UdpSocket::bind("0.0.0.0:5000")?;
     loop {
         let mut buf = [0; 1024];
         match socket.recv_from(&mut buf){
